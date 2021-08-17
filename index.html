@@ -21,8 +21,8 @@
         <nav class="nav">
           <div class="nav-list-div">
             <ul class="nav-list">
-                <li class="nav-list-li"><a href="#first-container"><img src="home.png" alt=""><span class="add-word">Page</span></a></li>
-                <li class="nav-list-li"><a href="#about-container"><img src="about.png" alt=""> <span class="add-word">Me</span></a></li>
+                <li class="nav-list-li"><a href="#first-container"><img src="home.png" alt=""></span></a></li>
+                <li class="nav-list-li"><a href="#about-container"><img src="about.png" alt=""></a></li>
                 <li class="nav-list-li"><a href="#skills-container"><img src="skills.png" alt=""></a></li>
                 <li class="nav-list-li"><a href="#blog-container"><img src="blog.png" alt=""></a></li>
                 <li class="nav-list-li"><a href="#contact-container"><img src="contact.png" alt=""></a></li>
@@ -123,17 +123,17 @@
       <header><h1>CONTACT ME</h1></header>
       <aside>
         <aside class="contact-form">
-          <form action="contact.php" method="post">
-          <table>
+          <form action="https://formsubmit.co/ahmethizireren@gmail.com" method="POST">
+            <table>
             <tr>
               <td>
                 <p>Full Name</p>
-                <input type="text" name="name" id="" placeholder="Your full name" >
+                <input type="text" name="name" id="" placeholder="Your full name" required>
               </td>
               <td>
                 <div>
                   <p>E-mail</p>
-                  <input type="email" name="mail" id="" placeholder="Your e-mail">  
+                  <input type="email" name="email" id="" placeholder="Your e-mail" required>  
                 </div>
               </td>
             </tr>
@@ -141,7 +141,7 @@
               <td colspan="2">
                 <div>
                   <p>Subject</p>
-                  <input type="text" name="subject" id="" placeholder="Subject">  
+                  <input type="text" name="_subject" id="" placeholder="Subject" required>
                 </div>
               </td>
             </tr>
@@ -149,7 +149,7 @@
               <td colspan="2">
                 <div>
                   <p>Your Message</p>
-                  <textarea name="message" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                  <textarea name="message" id="" cols="30" rows="10" placeholder="Your message" required></textarea>
                 </div>
               </td>
             </tr>
