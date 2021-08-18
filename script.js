@@ -26,6 +26,9 @@ var imgs = document.querySelectorAll('img');
 var i;
 for (i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
+    imgs[i].ontouchstart = function (e) {
+      e.preventDefault();
+    }
 }
 var articles = document.querySelectorAll("body>article");
 
