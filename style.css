@@ -20,8 +20,10 @@ img{
 }
 html {
     scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
 }    
 body{
+
     max-width: 1903px;
     margin: auto;
     background-color: white;
