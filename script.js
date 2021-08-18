@@ -27,6 +27,9 @@ var i;
 for (i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
 }
+var articles = document.querySelectorAll("body>article");
+
+var imgnav = document.querySelectorAll(".nav-list-li")
 var skillscontainer = document.querySelector(".skills-container");
 var blogs = document.querySelectorAll(".blog")
 const numb = document.querySelectorAll(".timer");
@@ -35,7 +38,17 @@ var skillsasides = document.querySelectorAll(".skills-container>aside aside")
 var toupbutton = document.querySelector(".toupbutton")
 toupbutton.addEventListener("click",topFunction);
 function scrollFunction() {
-  var windoww = window.innerWidth
+articles.forEach(articlesfunc)
+function articlesfunc(item,index) {
+  if(document.documentElement.scrollTop+100>=item.offsetTop){
+    console.log(index)
+  }
+}
+function imgnavfunc(item, index) {
+  imgnav
+}
+
+var windoww = window.innerWidth
   var windowh = window.innerHeight
   if(windoww>1000 && windowh>500){
     if (document.documentElement.scrollTop>40){
