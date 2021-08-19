@@ -1,7 +1,3 @@
-
-
-
-
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
 var makschar=300;
