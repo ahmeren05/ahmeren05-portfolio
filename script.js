@@ -1,10 +1,3 @@
-$(function () {
-  $("#top").click(function () {
-      // Sayfamızı kaydıracak olan kod burasıdır.
-      $("html,body").stop().animate({ scrollTop: "0" },00);
-  });
-});
-
 
 
 
