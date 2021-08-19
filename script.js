@@ -119,7 +119,7 @@ window.addEventListener("load", () => {
 
 toupbutton.addEventListener("click",topFunction)
 function topFunction() {
-  body.animate({
+  document.querySelector("body").animate({
     scrollTop : 0
   },500);
 }
