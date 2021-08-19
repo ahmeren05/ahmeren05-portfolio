@@ -175,6 +175,13 @@
       </aside>
     </article>
     <footer></footer>
+    <script>
+      document.querySelector('#top').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>  
+    <script src="smoothscroll.js"></script>
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" language="javascript" src="script.js"></script>
 </body>
