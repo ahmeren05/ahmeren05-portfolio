@@ -1,3 +1,14 @@
+$(function () {
+  $("#top").click(function () {
+      // Sayfamızı kaydıracak olan kod burasıdır.
+      $("html,body").stop().animate({ scrollTop: "0" },00);
+  });
+});
+
+
+
+
+
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
 var makschar=300;
@@ -26,18 +37,17 @@ var imgs = document.querySelectorAll('img');
 var i;
 for (i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
-
 }
-var articles = document.querySelectorAll("body>article");
 
-var skillscontainer = document.querySelector(".skills-container");
+
+var skillscontainer = document.querySelector(".skills-container")
 var blogs = document.querySelectorAll(".blog")
 const numb = document.querySelectorAll(".timer");
 let counter1 = 0,counter2 = 0, counter3 = 0;
 var skillsasides = document.querySelectorAll(".skills-container>aside aside")
-var toupbutton = document.querySelector(".toupbutton")
+var toupbutton = document.querySelector("#top")
 function scrollFunction() {
-var windoww = window.innerWidth
+  var windoww = window.innerWidth
   var windowh = window.innerHeight
   if(windoww>1000 && windowh>500){
     if (document.documentElement.scrollTop>40){
@@ -118,47 +128,3 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-var fnc_scrollto = function(to,id){
-  var smoothScrollFeature = 'scrollBehavior' in document.documentElement.style;
-  var articles = document.querySelectorAll("ul#content > li"), i;
-  if (to == 'elem') to = articles[id].offsetTop;
-  var i = parseInt(window.pageYOffset);
-  if ( i != to ) {
-      if (!smoothScrollFeature) {
-          to = parseInt(to);
-          if (i < to) {
-              var int = setInterval(function() {
-                  if (i > (to-20)) i += 1;
-                  else if (i > (to-40)) i += 3;
-                  else if (i > (to-80)) i += 8;
-                  else if (i > (to-160)) i += 18;
-                  else if (i > (to-200)) i += 24;
-                  else if (i > (to-300)) i += 40;
-                  else i += 60;
-                  window.scroll(0, i);
-                  if (i >= to) clearInterval(int);
-              }, 15);
-          }
-          else {
-              var int = setInterval(function() {
-                  if (i < (to+20)) i -= 1;
-                  else if (i < (to+40)) i -= 3;
-                  else if (i < (to+80)) i -= 8;
-                  else if (i < (to+160)) i -= 18;
-                  else if (i < (to+200)) i -= 24;
-                  else if (i < (to+300)) i -= 40;
-                  else i -= 60;
-                  window.scroll(0, i);
-                  if (i <= to) clearInterval(int);
-              }, 15);
-          }
-      }
-      else {
-          window.scroll({
-              top: to,
-              left: 0,
-              behavior: 'smooth'
-          });
-      }
-  }
-};

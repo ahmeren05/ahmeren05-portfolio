@@ -12,15 +12,10 @@ body,html{
     overflow-x: hidden;
 }
 img{
-    -webkit-user-select: none !important;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
     user-select: none;
 }
 html {
     scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
 }    
 body{
     max-width: 1903px;
@@ -264,9 +259,6 @@ a{
     font-size: 64px;
     font-family: 'Lilita One', cursive;
 }
-.skills-container>aside aside:nth-child(3) h3{
-    -webkit-font-size:40px !important;
-}
 .skills-container header{
     margin: 70px 0 50px;
 }
@@ -446,7 +438,7 @@ a{
     font-family: 'Lilita One', cursive;
 }
 
-.toupbutton {
+#top {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -463,11 +455,11 @@ a{
   transform: translateX(100px);
 }
 
-.toupbutton .touparrow{
+#top .touparrow{
     animation: 0.4s forwards;
     transform: rotate(-90deg);
 }
-.toupbutton:hover .touparrow{
+#top:hover .touparrow{
     animation: touparrow 0.4s forwards ;
 }
 
@@ -586,7 +578,7 @@ a{
     width: 70%;
     left: 50%;
     border-radius: 50%;
-    top:49%;
+    top: 50%;
     transform: translate(-50%,-50%);
     position: absolute;
     height: 59%;
