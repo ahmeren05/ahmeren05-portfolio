@@ -3,7 +3,6 @@
 
 
 
-
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
 var makschar=300;
@@ -121,5 +120,12 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("load", () => { 
   scrollFunction();
+});
+
+$(function () {
+  $("#top").click(function () {
+      // Sayfamızı kaydıracak olan kod burasıdır.
+      $("html,body").stop().animate({ scrollTop: "0" },00);
+  });
 });
 
