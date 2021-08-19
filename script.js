@@ -117,15 +117,15 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-toupbutton.addEventListener("click",function () {
+toupbutton.addEventListener("click",topFunction)
+function topFunction() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-  document.body.scrollTop = 40
-  document.documentElement.scrollTop = 40
+  document.body.scrollTop -= 40
+  document.documentElement.scrollTop -= 40
   setTimeout(function() {
   topFunction()
   }, 0)
   } else {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
-}
-})
+}}
