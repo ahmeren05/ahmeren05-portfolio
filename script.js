@@ -117,7 +117,7 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-toupbutton.click =function () {
+toupbutton.addEventListener("click",function () {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
   document.body.scrollTop -= 40
   document.documentElement.scrollTop -= 40
@@ -128,4 +128,4 @@ toupbutton.click =function () {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
 }
-}
+})
