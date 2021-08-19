@@ -1,3 +1,9 @@
+$(function () {
+  $("#top").click(function () {
+      // Sayfamızı kaydıracak olan kod burasıdır.
+      $("html,body").stop().animate({ scrollTop: "0" },00);
+  });
+});
 
 
 
@@ -120,12 +126,5 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("load", () => { 
   scrollFunction();
-});
-
-$(function () {
-  $("#top").click(function () {
-      // Sayfamızı kaydıracak olan kod burasıdır.
-      $("html,body").stop().animate({ scrollTop: "0" },00);
-  });
 });
 
