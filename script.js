@@ -118,6 +118,7 @@ window.addEventListener("load", () => {
 });
 
 $("#top").click(function(){
+  console.log("SA")
   $("body").animate({
       scrollTop: 0
   }, 2000);
