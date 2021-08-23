@@ -119,6 +119,8 @@ window.addEventListener("load", () => {
 
 $("#top").click(function(){
   console.log("SA")
+  document.documentElement.scrollTop=0;
+  document.body.scrollTop=0;
   document.documentElement.animate({
       scrollTop: 0
   }, 2000);
