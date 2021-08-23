@@ -117,7 +117,7 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-$(toupbutton).click(function(){
+$("#top").click(function(){
   $("body").animate({
       scrollTop: 0
   }, 2000);
