@@ -39,13 +39,13 @@ function scrollFunction() {
   var windoww = window.innerWidth
   var windowh = window.innerHeight
   if(windoww>1000 && windowh>500){
-    if (document.documentElement.scrollTop>40){
+    if (document.documentElement.scrollTop>40 || document.body.scrollTop>40){
       document.querySelector(".nav-list-div").style.transform = "translateX(0)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(-100px)";
       document.querySelector(".nav-list-div").style.transition = "transform 0.5s"
       document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
     }
-    else if(document.documentElement.scrollTop<=40){ 
+    else if(document.documentElement.scrollTop<=40 || document.body.scrollTop<=40){ 
       document.querySelector(".nav-list-div").style.transition = "transform 0.5s"
       document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
       document.querySelector(".nav-list-div").style.transform = "translateX(150px)";
@@ -55,9 +55,9 @@ function scrollFunction() {
     document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
     document.querySelector(".nav-list-div2").style.transform = "translate(0px)"
   }
-  if (document.documentElement.scrollTop > 40) {
+  if (document.documentElement.scrollTop > 40 || document.body.scrollTop>40) {
     toupbutton.style.transform = "translateX(0px)";
-  }if(document.documentElement.scrollTop<=40){
+  }if(document.documentElement.scrollTop<=40 || document.body.scrollTop<=40){
     toupbutton.style.transform = "translateX(100px)";
   }
   if (document.body.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3 +skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3) +skillscontainer.offsetTop){
@@ -116,12 +116,14 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", () => { 
   scrollFunction();
 });
-
-$("#top").click(function(){
-  console.log("SA")
-  document.documentElement.animate({
-      scrollTop: 0
-  }, 2000);
-  document.documentElement.scrollTop=0;
-  document.body.scrollTop=0;
+var toupbtn = $("#top");
+toupbtn.on("click",function(e) {
+    e.preventDefault();
+    $("html,body").animate({scrollTop:0},"300")
 });
+
+/*
+toupbutton.click(function(){
+  document.body.scrollTop=0; //for safari
+  document.documentElement.scrollTop=0; // chrome
+});*/
