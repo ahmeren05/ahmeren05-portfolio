@@ -314,6 +314,7 @@ a{
   z-index: 1;
   background: #dde6f0;
   overflow: hidden;
+  border-radius:100px 0 0 100px;
 }
 
 .progress .left, .progress .right {
