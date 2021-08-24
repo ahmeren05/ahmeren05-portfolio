@@ -267,12 +267,12 @@ a{
   height: 200px;
   font-size: 30px;
   color:#4158d0;
-  border-radius: 50%;
   overflow: hidden;
   position: relative;
   background: #dde6f0;
   text-align: center;
   line-height: 200px;
+  border: 1px solid black;
 }
 .progress::before{
     content: "";
@@ -330,18 +330,23 @@ a{
 
 .htmlskillsleft{
     animation:  0.625s linear forwards;
+    -webkit-animation:  0.625s linear forwards;
 }
 .htmlskillsright{
     animation: .375s linear forwards 0.625s;
+    -webkit-animation: .375s linear forwards 0.625s;
 }
 .cssskillsleft{
     animation:  0.714s linear forwards;
+    -webkit-animation:  0.714s linear forwards;
 }
 .cssskillsright{
     animation: .286s linear forwards .714s;
+    -webkit-animation: .286s linear forwards .714s;
 }
 .jsskillsright{
     animation: 1s linear forwards;
+    -webkit-animation: 1s linear forwards;
 }
 @keyframes percent50 {
   0% {transform: rotate(0deg);}
@@ -372,6 +377,7 @@ a{
     justify-content: center;
     flex-direction: column;
     flex: 1;
+    border: 1px solid black;
     min-width: 316px;
     margin: 50px;
 }
