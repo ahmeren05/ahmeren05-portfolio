@@ -120,5 +120,4 @@ window.addEventListener("load", () => {
 toupbutton.addEventListener("click",toupfunc)
 function toupfunc() {
   window?.scrollTo({ top: 0?.current?.offsetTop - 48, behavior: "smooth" });
-  document.documentElement.scrollTop= 0
 };
