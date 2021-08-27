@@ -120,11 +120,10 @@ window.addEventListener("load", () => {
   'use strict';
   function backToTop() {
     if (window.pageYOffset > 0) {
-      window.scrollBy(0, -(window.pageYOffset*0.04));
+      window.scrollBy(0, -(window.pageYOffset/80));
       setTimeout(backToTop, 0);
     }
   }
   var goTopBtn = document.querySelector('.top');
   goTopBtn.addEventListener('click', backToTop);
 })();
-alert(window.pageYOffset)
