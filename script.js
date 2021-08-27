@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
   'use strict';
   function backToTop() {
     if (window.pageYOffset > 0) {
-      window.scrollBy(0, -(80));
+      window.scrollBy(0, -(window.pageYOffset/10));
       setTimeout(backToTop, 0);
     }
   }
