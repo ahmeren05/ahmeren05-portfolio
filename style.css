@@ -14,9 +14,6 @@ body,html{
 img{
     user-select: none;
 }
-html {
-    scroll-behavior: smooth;
-}    
 body{
     max-width: 1903px;
     margin: auto;
@@ -309,11 +306,11 @@ a{
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left:0;
   z-index: 1;
   background: #dde6f0;
   overflow: hidden;
-  border-radius:100px 0 0 100px;
+  border-radius:50% 0 0 50%;
 }
 
 .progress .left, .progress .right {
@@ -444,35 +441,33 @@ a{
     font-family: 'Lilita One', cursive;
 }
 
-#top {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width:50px ;
-  height:50px;
-  border-radius: 50%;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #0B3E5E;
-  box-shadow: 0 0 1px 1px #185a83;
-  cursor: pointer;
-  transition:transform 0.5s;
-  transform: translateX(100px);
-}
-
-#top .touparrow{
-    animation: 0.4s forwards;
-    transform: rotate(-90deg);
-}
-#top:hover .touparrow{
-    animation: touparrow 0.4s forwards ;
-}
-
-@keyframes touparrow {
-    50%{transform: rotate(-90deg) translateX(5px);}
-    100%{transform: rotate(-90deg) translateY(0px);}
-}
+.top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width:50px ;
+    height:50px;
+    border-radius: 50%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #0B3E5E;
+    box-shadow: 0 0 1px 1px #185a83;
+    cursor: pointer;
+  }
+  
+  .top .touparrow{
+      animation: 0.4s forwards;
+      transform: rotate(-90deg);
+  }
+  .top:hover .touparrow{
+      animation: touparrow 0.4s forwards ;
+  }
+  
+  @keyframes touparrow {
+      50%{transform: rotate(-90deg) translateX(5px);}
+      100%{transform: rotate(-90deg) translateY(0px);}
+  }
 .contact-container{
     height: 100vh;
     max-height: 937px;

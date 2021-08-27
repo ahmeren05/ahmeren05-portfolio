@@ -21,20 +21,19 @@ for (let index = 0; index < imgs.length; index++) {
         return false
     }
 }
-var zaman1check = zaman2check = zaman3check = 0;
 var imgs = document.querySelectorAll('img');
 var i;
 for (i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
 }
 
-
+var zaman1check = zaman2check = zaman3check = 0;
 var skillscontainer = document.querySelector(".skills-container")
 var blogs = document.querySelectorAll(".blog")
 const numb = document.querySelectorAll(".timer");
 let counter1 = 0,counter2 = 0, counter3 = 0;
 var skillsasides = document.querySelectorAll(".skills-container>aside aside")
-var toupbutton = document.querySelector("#top")
+var toupbutton = document.querySelector(".top")
 function scrollFunction() {
   var windoww = window.innerWidth
   var windowh = window.innerHeight
@@ -117,7 +116,14 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-toupbutton.addEventListener("click",toupfunc)
-function toupfunc() {
-  window?.scrollTo({ top: 0?.current?.offsetTop - 48, behavior: "smooth" });
-};
+(function() {
+  'use strict';
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -(window.pageYOffset/50));
+      setTimeout(backToTop, 0);
+    }
+  }
+  var goTopBtn = document.querySelector('.top');
+  goTopBtn.addEventListener('click', backToTop);
+})();
