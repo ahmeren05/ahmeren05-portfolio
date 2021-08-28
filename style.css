@@ -7,6 +7,8 @@
 }
 li{
     list-style-type:none;
+    color: white;
+    cursor: pointer;
 }
 body,html{
     overflow-x: hidden;
@@ -22,6 +24,7 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .first-container{
     width: 100%;
@@ -454,6 +457,8 @@ a{
     background-color: #0B3E5E;
     box-shadow: 0 0 1px 1px #185a83;
     cursor: pointer;
+    transition:transform 0.5s;
+    transform: translateX(100px);
   }
   
   .top .touparrow{
