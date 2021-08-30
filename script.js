@@ -27,6 +27,7 @@ for (i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
 }
 
+var body = document.querySelector("body") 
 var zaman1check = zaman2check = zaman3check = 0;
 var skillscontainer = document.querySelector(".skills-container")
 var blogs = document.querySelectorAll(".blog")
@@ -116,13 +117,23 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
-(function() {
-  function backToTop() {
-    if (window.pageYOffset > 0) {
-      window.scrollBy(0, -(window.pageYOffset/20));
-      setTimeout(backToTop, 0);
-    }
+function smoothScroll(target) {
+  var duration = 1000;
+  var target = document.querySelector(target);
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPostition = window.pageYOffset;
+  var distance = targetPosition - startPostition;
+  var startTime = null;
+  function animation(currentTime) {
+    if (startTime === null)  startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var run = ease(timeElapsed, startPostition,distance,duration)
+      window.scrollTo(0,run);
+      if (timeElapsed < duration) requestAnimationFrame(animation)
   }
-  var goTopBtn = document.querySelector('.top');
-  goTopBtn.addEventListener('click', backToTop);
-})();
+  function ease (t, b, c, d) {
+    return c * Math.sin(t/d * (Math.PI/2)) + b;
+  };
+  requestAnimationFrame(animation);
+}
+
