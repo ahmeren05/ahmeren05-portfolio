@@ -63,7 +63,9 @@ function scrollFunction() {
   if (document.body.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3 +skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3) +skillscontainer.offsetTop){
     document.querySelector(".htmlskillsleft").style.animationName="percent50";
     document.querySelector(".htmlskillsright").style.animationName="percent80";
-    zaman1check++;
+    if (zaman1check == 0 || zaman1check == 1) {  
+      zaman1check++;
+    }
     if (zaman1check==1) {
       var zaman1 = setInterval(() => {
         if(counter1 == 80 ){
@@ -78,7 +80,9 @@ function scrollFunction() {
   if (document.body.scrollTop + windowh > skillsasides[1].offsetTop + ((skillsasides[1].offsetHeight)*2/3 + skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[1].offsetTop + ((skillsasides[1].offsetHeight)*2/3 + skillscontainer.offsetTop)){
     document.querySelector(".cssskillsleft").style.animationName="percent50";
     document.querySelector(".cssskillsright").style.animationName="percent70";
-    zaman2check++;
+    if (zaman2check == 0 || zaman2check == 1) {
+      zaman2check++;
+    }
     if (zaman2check==1) {
       var zaman2 = setInterval(() => {
         if(counter2 == 70 ){
@@ -92,7 +96,9 @@ function scrollFunction() {
   }
   if (document.body.scrollTop + windowh > skillsasides[2].offsetTop + ((skillsasides[2].offsetHeight)*2/3 + skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[2].offsetTop + ((skillsasides[2].offsetHeight)*2/3 + skillscontainer.offsetTop)){
     document.querySelector(".jsskillsright").style.animationName="percent40";
-    zaman3check++;
+    if (zaman3check == 0 || zaman3check == 1) {
+      zaman3check++;
+    }
     if (zaman3check==1) {
       var zaman3 = setInterval(() => {
         if(counter3 == 40 ){
