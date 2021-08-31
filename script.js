@@ -180,3 +180,6 @@ output += 'isEdge: ' + isEdge + '<br>';
 output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
 output += 'isBlink: ' + isBlink + '<br>';
 console.log(output)
+if (isSafari) {
+  alert("safari:true")
+}
