@@ -67,7 +67,7 @@ function scrollFunction() {
     if (zaman1check == 0 || zaman1check == 1) {  
       zaman1check++;
     }
-    if (zaman1check==1 && isSafari == false) {
+    if (zaman1check==1 && isSafari != true) {
       var zaman1 = setInterval(() => {
         if(counter1 == 80 ){
           clearInterval(zaman1);
@@ -84,7 +84,7 @@ function scrollFunction() {
     if (zaman2check == 0 || zaman2check == 1) {
       zaman2check++;
     }
-    if (zaman2check==1 && isSafari == false) {
+    if (zaman2check==1 && isSafari != true) {
       var zaman2 = setInterval(() => {
         if(counter2 == 70 ){
           clearInterval(zaman2);
@@ -100,7 +100,7 @@ function scrollFunction() {
     if (zaman3check == 0 || zaman3check == 1) {
       zaman3check++;
     }
-    if (zaman3check==1 && isSafari == false) {
+    if (zaman3check==1 && isSafari != true) {
       var zaman3 = setInterval(() => {
         if(counter3 == 40 ){
           clearInterval(zaman3);
