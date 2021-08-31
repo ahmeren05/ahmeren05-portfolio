@@ -144,3 +144,14 @@ function smoothScroll(target) {
   requestAnimationFrame(animation);
 }
 
+
+var output = 'Detecting browsers by ducktyping:<hr>';
+output += 'isFirefox: ' + isFirefox + '<br>';
+output += 'isChrome: ' + isChrome + '<br>';
+output += 'isSafari: ' + isSafari + '<br>';
+output += 'isOpera: ' + isOpera + '<br>';
+output += 'isIE: ' + isIE + '<br>';
+output += 'isEdge: ' + isEdge + '<br>';
+output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
+output += 'isBlink: ' + isBlink + '<br>';
+console.log(output)
