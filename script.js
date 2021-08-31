@@ -1,4 +1,5 @@
-var isSafari = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+alert(isSafari)
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
 var makschar=300;
@@ -67,7 +68,7 @@ function scrollFunction() {
     if (zaman1check == 0 || zaman1check == 1) {  
       zaman1check++;
     }
-    if (zaman1check==1 && isSafari != true) {
+    if (zaman1check==1 && isSafari == false) {
       var zaman1 = setInterval(() => {
         if(counter1 == 80 ){
           clearInterval(zaman1);
@@ -84,7 +85,7 @@ function scrollFunction() {
     if (zaman2check == 0 || zaman2check == 1) {
       zaman2check++;
     }
-    if (zaman2check==1 && isSafari != true) {
+    if (zaman2check==1 && isSafari == false) {
       var zaman2 = setInterval(() => {
         if(counter2 == 70 ){
           clearInterval(zaman2);
@@ -100,7 +101,7 @@ function scrollFunction() {
     if (zaman3check == 0 || zaman3check == 1) {
       zaman3check++;
     }
-    if (zaman3check==1 && isSafari != true) {
+    if (zaman3check==1 && isSafari == false) {
       var zaman3 = setInterval(() => {
         if(counter3 == 40 ){
           clearInterval(zaman3);
