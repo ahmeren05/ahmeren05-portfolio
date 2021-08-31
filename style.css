@@ -383,14 +383,14 @@ a{
 }
 
 .skills-container >aside aside h3 {
-    font-family:  Calibri;
-    font-size: 48px;
+    font-family: sans-serif;
+    font-size: 40px;
     margin-bottom: 25px;
 }
 
 .skills-container>aside aside h3 img{
-    width: 50px;
-    vertical-align: -12px;
+    width: 49px;
+    vertical-align: -11px;
 }
 
 .blog-container{
