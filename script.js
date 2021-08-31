@@ -1,4 +1,5 @@
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+var isSafari =!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
 alert(isSafari)
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
