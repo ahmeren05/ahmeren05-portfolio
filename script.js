@@ -1,6 +1,5 @@
 var isSafari =!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
-alert(isSafari)
 //blogtext max char
 var blogtexts = document.querySelectorAll(".blog-text")
 var makschar=300;
