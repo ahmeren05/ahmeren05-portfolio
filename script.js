@@ -30,17 +30,29 @@ for (i = 0; i < imgs.length; i++) {
 }
 
 var body = document.querySelector("body") 
+
+
+//skills container progress
 var zaman1check = zaman2check = zaman3check = 0;
 var skillscontainer = document.querySelector(".skills-container")
-var blogs = document.querySelectorAll(".blog")
 const numb = document.querySelectorAll(".timer");
 let counter1 = 0,counter2 = 0, counter3 = 0;
 var skillsasides = document.querySelectorAll(".skills-container>aside aside")
+
+
+//blog text animation
+var blogs = document.querySelectorAll(".blog")
+
+// to up button
 var toupbutton = document.querySelector(".top")
+
+
 function scrollFunction() {
   var windoww = window.innerWidth
   var windowh = window.innerHeight
-  if(windoww>1000 && windowh>500){
+
+  //navigation circle animation
+  if(windoww>=1000 && windowh>=500){
     if (document.documentElement.scrollTop>40 ||document.body.scrollTop>40){
       document.querySelector(".nav-list-div").style.transform = "translateX(0)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(-100px)";
@@ -53,15 +65,34 @@ function scrollFunction() {
       document.querySelector(".nav-list-div").style.transform = "translateX(150px)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
     }
+  }else if((windoww<1000) || (windoww>1000 && windowh<500)){
+    if (document.documentElement.scrollTop>40 ||document.body.scrollTop>40){
+      document.querySelector(".nav-list-div").style.transform = "translateY(0)";
+      document.querySelector(".nav-list-div2").style.transform = "translateY(-100px)";
+      document.querySelector(".nav-list-div").style.transition = "transform 0.5s"
+      document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
+    }
+    else if(document.documentElement.scrollTop<=40 || document.body.scrollTop<=40){ 
+      document.querySelector(".nav-list-div").style.transition = "transform 0.5s"
+      document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
+      document.querySelector(".nav-list-div").style.transform = "translateY(-150px)";
+      document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
+    }
   }else{
     document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
-    document.querySelector(".nav-list-div2").style.transform = "translate(0px)"
+    document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
   }
+
+  // to up button animation
   if (document.documentElement.scrollTop > 40) {
     toupbutton.style.transform = "translateX(0px)";
   }if(document.documentElement.scrollTop<=40){
     toupbutton.style.transform = "translateX(100px)";
   }
+
+
+  //skills container progress
+  //html progress
   if (document.body.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3 +skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[0].offsetTop + ((skillsasides[0].offsetHeight)*2/3) +skillscontainer.offsetTop){
     document.querySelector(".htmlskillsleft").style.animationName="percent50";
     document.querySelector(".htmlskillsright").style.animationName="percent80";
@@ -79,6 +110,7 @@ function scrollFunction() {
       }, 12.5);
     }
   }
+  //css progress
   if (document.body.scrollTop + windowh > skillsasides[1].offsetTop + ((skillsasides[1].offsetHeight)*2/3 + skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[1].offsetTop + ((skillsasides[1].offsetHeight)*2/3 + skillscontainer.offsetTop)){
     document.querySelector(".cssskillsleft").style.animationName="percent50";
     document.querySelector(".cssskillsright").style.animationName="percent70";
@@ -96,6 +128,7 @@ function scrollFunction() {
       }, 14.25);
     }
   }
+  //javascript progress
   if (document.body.scrollTop + windowh > skillsasides[2].offsetTop + ((skillsasides[2].offsetHeight)*2/3 + skillscontainer.offsetTop) || document.documentElement.scrollTop + windowh > skillsasides[2].offsetTop + ((skillsasides[2].offsetHeight)*2/3 + skillscontainer.offsetTop)){
     document.querySelector(".jsskillsright").style.animationName="percent40";
     if (zaman3check == 0 || zaman3check == 1) {
@@ -112,9 +145,30 @@ function scrollFunction() {
       },25);  
     }
   }
+
+  //blog text animation
   for (let index = 0; index < blogs.length; index++) {
     if (document.body.scrollTop + windowh > blogs[index].offsetTop + ((blogs[index].offsetHeight)*2/3) || document.documentElement.scrollTop + windowh > blogs[index].offsetTop + ((blogs[index].offsetHeight)*2/3)){
       blogs[index].style.animationName="blogdrop";
+    }
+  }
+
+  
+  //navigation circles background change
+  var pageyoffestenbüyükler = []
+  var articles = document.querySelectorAll("body>article")
+  for (let index = 0; index < articles.length; index++) {
+    if (window.pageYOffset>=(articles[index].offsetTop)-window.innerHeight * 1/3) {
+      pageyoffestenbüyükler.push(articles[index])
+    }
+  }
+  var boyanacaktop = pageyoffestenbüyükler.length -1;  
+  console.log("işlem yapılacak: " + boyanacaktop)
+  var navlistli = document.querySelectorAll(".nav-list-li")
+  for (let index = 0; index < navlistli.length; index++) {
+    navlistli[index].style.backgroundColor = "white";
+    if (index==boyanacaktop) {
+      navlistli[boyanacaktop].style.backgroundColor = "#185982"
     }
   }
 }
@@ -125,11 +179,13 @@ window.addEventListener("load", () => {
   scrollFunction();
 });
 
+
+//smooth scroll animation
 function smoothScroll(target) {
   var duration = 1000;
   var target = document.querySelector(target);
   var targetPosition = target.getBoundingClientRect().top;
-  var startPostition = window.pageYOffset;
+  var startPostition = window.scrollY;
   var distance = targetPosition - startPostition;
   var startTime = null;
   function animation(currentTime) {
