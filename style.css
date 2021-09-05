@@ -679,7 +679,7 @@ a{
         justify-content: center;
     }
     .nav-list-div{
-        transform: translateY(00px);
+        transform: translateY(-150px);
     }
     .first-container>.nav{
         position:fixed;
@@ -687,7 +687,7 @@ a{
         z-index: 5;
         width: 375px;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translateX(-50%);
     }
     .nav-list{
         display: flex;
