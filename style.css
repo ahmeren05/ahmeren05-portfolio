@@ -419,7 +419,7 @@ a{
 @keyframes blogdrop {
     100%{opacity: 1;transform: translateX(0);user-select: initial;}
 }
-.blog-container>aside>aside:hover,.blog-container>aside>aside:active,.blog-container>aside>aside:focus{
+.blog-container>aside>aside:hover{
     background-color: rgb(247, 247, 247);
 }
 .blog-container > aside aside .blog-title {
@@ -445,7 +445,7 @@ a{
     border: 1px solid rgb(200, 200, 200);
     margin: 0 0 50px 0;
 }
-.more-blog-button:hover,.more-blog-button:active,.more-blog-button:focus{
+.more-blog-button:hover{
     background-color: rgb(240, 240, 240);
 }
 .top {
@@ -469,7 +469,7 @@ a{
       animation: 0.4s forwards;
       transform: rotate(-90deg);
   }
-  .top:hover .touparrow,.top:focus .touparrow,.top:active .touparrow{
+  .top:hover .touparrow{
       animation: touparrow 0.4s forwards ;
   }
   
@@ -552,7 +552,7 @@ a{
     border: 3px solid #4158d0;
     margin-right:15px ;
 }
-.contact-form form table tr:last-child td button:hover,.contact-form form table tr:last-child td button:focus,.contact-form form table tr:last-child td button:active{
+.contact-form form table tr:last-child td button:hover{
     background-color: #4158d0;
     color: white;   
 }
