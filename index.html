@@ -15,28 +15,30 @@
     </noscript>
   </head>
 <body>
-  <button class="top" onclick="smoothScroll('.first-container')"><img src="touparrow.png" class="touparrow" alt=""></button>
-    <header></header>
+  <a href="#first-container">
+    <button class="top"><img src="touparrow.png" class="touparrow" alt=""></button>
+  </a> 
+  <header></header>
     <article class="first-container" id="first-container">
         <nav class="nav">
           <div class="nav-list-div">
             <ul class="nav-list">
-                <li class="nav-list-li" onclick="smoothScroll('#first-container')"><img src="home.png" alt=""></li>
-                <li class="nav-list-li" onclick="smoothScroll('#about-container')"><img src="about.png" alt=""></li>
-                <li class="nav-list-li" onclick="smoothScroll('#skills-container')"><img src="skills.png" alt=""></li>
-                <li class="nav-list-li" onclick="smoothScroll('#blog-container')"><img src="blog.png" alt=""></li>
-                <li class="nav-list-li" onclick="smoothScroll('#contact-container')"><img src="contact.png" alt=""></li>
+                <li class="nav-list-li"><a href="#first-container"><img src="home.png" alt=""></a></li>
+                <li class="nav-list-li"><a href="#about-container"><img src="about.png" alt=""></a></li>
+                <li class="nav-list-li"><a href="#skills-container"><img src="skills.png" alt=""></a></li>
+                <li class="nav-list-li"><a href="#blog-container"><img src="blog.png" alt=""></a></li>
+                <li class="nav-list-li"><a href="#contact-container"><img src="contact.png" alt=""></a></li>
             </ul>
           </div>
         </nav>
         <nav class="nav2">
           <div class="nav-list-div2">
               <ul class="nav-list2">
-                  <li class="nav-list-li2" onclick="smoothScroll('#first-container')">Main <span class="add-word">Page</span></li>
-                  <li class="nav-list-li2" onclick="smoothScroll('#about-container')">About <span class="add-word">Me</span></li>
-                  <li class="nav-list-li2" onclick="smoothScroll('#skills-container')">Skills</li>
-                  <li class="nav-list-li2" onclick="smoothScroll('#blog-container')">Blog</li>
-                  <li class="nav-list-li2" onclick="smoothScroll('#contact-container')">Contact</li>
+                  <li class="nav-list-li2"><a href="#first-container">Main <span class="add-word">Page</span></a></li>
+                  <li class="nav-list-li2"><a href="#about-container">About <span class="add-word">Me</span></a></li>
+                  <li class="nav-list-li2"><a href="#skills-container">Skills</a></li>
+                  <li class="nav-list-li2"><a href="#blog-container">Blog</a></li>
+                  <li class="nav-list-li2"><a href="#contact-container">Contact</a></li>
               </ul>
           </div>
       </nav>
@@ -174,6 +176,7 @@
         </aside>
       </aside>
     </article>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script type="text/javascript" language="javascript" src="script.js"></script>
 </body>
 </html>

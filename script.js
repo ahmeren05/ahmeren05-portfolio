@@ -180,24 +180,8 @@ window.addEventListener("load", () => {
 });
 
 
-//smooth scroll animation
-function smoothScroll(target) {
-  var duration = 1000;
-  var target = document.querySelector(target);
-  var targetPosition = target.getBoundingClientRect().top;
-  var startPostition = window.scrollY;
-  var distance = targetPosition - startPostition;
-  var startTime = null;
-  function animation(currentTime) {
-    if (startTime === null)  startTime = currentTime;
-      var timeElapsed = currentTime - startTime;
-      var run = ease(timeElapsed, startPostition,distance,duration)
-      window.scrollTo(0,run);
-      if (timeElapsed < duration) requestAnimationFrame(animation)
-  }
-  function ease (t, b, c, d) {
-    return c * Math.sin(t/d * (Math.PI/2)) + b;
-  };
-  requestAnimationFrame(animation);
-}
 
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 500,
+	speedAsDuration: true
+});
