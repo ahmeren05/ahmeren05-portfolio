@@ -52,7 +52,7 @@ function scrollFunction() {
   var windowh = window.innerHeight
 
   //navigation circle animation
-  if(windoww>=1000 && windowh>=500){
+  if(windoww>=1000 && windowh>=500){ //circle vertical
     if (document.documentElement.scrollTop>40 ||document.body.scrollTop>40){
       document.querySelector(".nav-list-div").style.transform = "translateX(0)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(-100px)";
@@ -65,7 +65,7 @@ function scrollFunction() {
       document.querySelector(".nav-list-div").style.transform = "translateX(150px)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
     }
-  }else if((windoww<1000) || (windoww>1000 && windowh<500)){
+  }else if((windoww<1000) || (windowh<500)){ //circle horizontal
     if (document.documentElement.scrollTop>40 ||document.body.scrollTop>40){
       document.querySelector(".nav-list-div").style.transform = "translateY(0)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(-100px)";
@@ -78,9 +78,6 @@ function scrollFunction() {
       document.querySelector(".nav-list-div").style.transform = "translateY(-150px)";
       document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
     }
-  }else{
-    document.querySelector(".nav-list-div2").style.transition = "transform 0.5s"
-    document.querySelector(".nav-list-div2").style.transform = "translateY(0px)";  
   }
 
   // to up button animation
