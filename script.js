@@ -163,7 +163,6 @@ function scrollFunction() {
     }
   }
   var boyanacaktop = pageyoffestenbüyükler.length -1;  
-  console.log("işlem yapılacak: " + boyanacaktop)
   var navlistli = document.querySelectorAll(".nav-list-li")
   for (let index = 0; index < navlistli.length; index++) {
     navlistli[index].style.backgroundColor = "white";
@@ -180,7 +179,7 @@ window.addEventListener("load", () => {
 });
 
 
-
+//smooth scroll
 var scroll = new SmoothScroll('a[href*="#"]', {
 	speed: 500,
 	speedAsDuration: true

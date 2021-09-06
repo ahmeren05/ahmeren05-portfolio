@@ -51,6 +51,7 @@ a{
     justify-content: flex-end;
     height: 75px;
     width: 100%;
+    z-index: 15;
 }
 .nav-list-div2{
     display: flex;
