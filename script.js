@@ -26,9 +26,10 @@ for (let index = 0; index < imgs.length; index++) {
 var imgs = document.querySelectorAll('img');
 var i;
 for (i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('dragstart', (e) => e.preventDefault())
-}
-
+    imgs[i].addEventListener('dragstart', function (e) {
+      e.preventDefault()
+    }
+)}
 var body = document.querySelector("body") 
 
 
