@@ -98,7 +98,7 @@ function scrollFunction() {
       zaman1check++;
     }
     if (zaman1check==1 && isSafari == false) {
-      var zaman1 = setInterval(() => {
+      var zaman1 = setInterval(function() {
         if(counter1 == 80 ){
           clearInterval(zaman1);
         }else{
@@ -116,7 +116,7 @@ function scrollFunction() {
       zaman2check++;
     }
     if (zaman2check==1 && isSafari == false) {
-      var zaman2 = setInterval(() => {
+      var zaman2 = setInterval(function() {
         if(counter2 == 70 ){
           clearInterval(zaman2);
         }else{
@@ -133,7 +133,7 @@ function scrollFunction() {
       zaman3check++;
     }
     if (zaman3check==1 && isSafari == false) {
-      var zaman3 = setInterval(() => {
+      var zaman3 = setInterval(function() {
         if(counter3 == 40 ){
           clearInterval(zaman3);
         }else{
@@ -169,10 +169,10 @@ function scrollFunction() {
     }
   }
 }
-window.addEventListener("scroll", () => { 
+window.addEventListener("scroll",function() { 
   scrollFunction();
 });
-window.addEventListener("load", () => { 
+window.addEventListener("load", function() { 
   scrollFunction();
 });
 
