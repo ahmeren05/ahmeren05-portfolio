@@ -13,8 +13,10 @@
     <noscript><!--Javascripti pasif olan ziyaretcilere gönderir-->
         Sayın Kullanıcı tarayıcınızda Javascript kodlarının çalıştırılması pasif durumdadır
     </noscript>
+    
   </head>
 <body>
+  
   <a href="#first-container">
     <button class="top"><img src="touparrow.png" class="touparrow" alt=""></button>
   </a> 
@@ -177,18 +179,19 @@
         </aside>
       </aside>
     </article>
-    <script>
-      var isIE = (navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode)
-      alert(isIE)
-      var body = document.querySelector("body")
-      var allelements = body.querySelectorAll("*")
-      if(isIE){
-          for (var index = 0; index < allelements.length; index++) {
-              allelements[index].style.display="none"
-          }
-      }
-  </script>
+
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script type="text/javascript" language="javascript" src="script.js"></script>
 </body>
+<script>
+  var isIE = (navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode)
+  var body = document.querySelector("body")
+  var allelements = body.querySelectorAll("*")
+  if(isIE){
+      for (var index = 0; index < allelements.length; index++) {
+          allelements[index].style.display="none"
+      }
+      document.write("<div style=\"position:absolute;top:50vh;left:50%;transform:translate(-50% , -50%);font-family: 'Roboto', sans-serif;font-size:15px;max-width:455px\"><div style=\"display:flex;align-items:center;flex-flow:wrap row;justify-content:space-around;\"><p style=\"margin:15px 0\">Dear user, to use my website, please visit my page from a different browser.</p><p> - Ahmet Hızır Eren / Frontend Developer . </p></div>")
+  }
+</script>
 </html>
